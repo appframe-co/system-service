@@ -27,6 +27,7 @@ export type TCurrencyModel = {
 }
 
 export type TCurrency = {
+  id: string;
   name: string;
   code: string;
   enabled:boolean;
@@ -39,4 +40,20 @@ export type TCurrency = {
   subunitToUnit: number;
   symbol: string;
   thousandsSeparator: string;
+}
+
+export type TLanguageModel = {
+  id: string;
+  name: string;
+  code: string;
+  enabled:boolean;
+  sort: number;
+}
+
+export type TLanguage = {
+  id: string;
+  name: string;
+  code: string;
+  enabled:boolean;
+  sort: number;
 }
