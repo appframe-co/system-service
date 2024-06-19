@@ -1,5 +1,5 @@
 import mongoose, { Schema, Document } from "mongoose";
-import {TSchemaBrickModel} from '@/types/types'
+import {TSchemaFieldModel} from '@/types/types'
 
 const PresetChoiceSchema: Schema = new Schema({
   name: String,
@@ -15,7 +15,7 @@ const ValidationSchema: Schema = new Schema({
   presetChoices: [PresetChoiceSchema]
 });
 
-const SchemaBrickSchema: Schema = new Schema({
+const SchemaFieldSchema: Schema = new Schema({
   name: String,
   type: String,
   icon: String,
@@ -25,7 +25,7 @@ const SchemaBrickSchema: Schema = new Schema({
   validations: [ValidationSchema]
 });
 
-SchemaBrickSchema.set('toObject', { virtuals: true });
-SchemaBrickSchema.set('toJSON', { virtuals: true });
+SchemaFieldSchema.set('toObject', { virtuals: true });
+SchemaFieldSchema.set('toJSON', { virtuals: true });
 
-export default mongoose.models.SchemaBrick || mongoose.model < TSchemaBrickModel & Document > ("SchemaBrick", SchemaBrickSchema);
+export default mongoose.models.SchemaField || mongoose.model < TSchemaFieldModel & Document > ("SchemaField", SchemaFieldSchema);

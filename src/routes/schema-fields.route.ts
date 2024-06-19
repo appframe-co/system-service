@@ -1,11 +1,11 @@
 import express, { Request, Response, NextFunction } from 'express';
-import SchemaBricksController from '@/controllers/schema-brick/schema-bricks.controller'
+import SchemaFieldsController from '@/controllers/schema-field/schema-fields.controller';
 
 const router = express.Router();
 
 router.get('/', async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const data = await SchemaBricksController();
+        const data = await SchemaFieldsController();
 
         res.json(data);
     } catch (e) {

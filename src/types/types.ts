@@ -58,37 +58,37 @@ export type TLanguage = {
   sort: number;
 }
 
-type TValidationBrickModel = {
+type TValidationFieldModel = {
   code: string;
   type: string;
   value: any;
 }
 
-export type TSchemaBrickModel = {
+export type TSchemaFieldModel = {
   name: string;
   code: string;
   icon: string;
   list: boolean;
   validationDescHtml: string|null;
-  validations: TValidationBrickModel[]
+  validations: TValidationFieldModel[]
 }
 
-export type TSchemaBrickOutput = {
+export type TSchemaFieldOutput = {
   id: string;
   type: string;
   name: string;
   code: string;
   icon: string;
-  validations: TValidationBrick[];
+  validations: TValidationField[];
 }
 
-type TValidationBrick = {
+type TValidationField = {
   type: string;
   code: string;
   value: any;
 }
 
-type TValidationSchemaBrick = {
+type TValidationSchemaField = {
   code: string;
   name: string;
   desc: string;
@@ -97,7 +97,7 @@ type TValidationSchemaBrick = {
   presetChoices: {name: string, value: string}[];
 }
 
-export type TSchemaBrick = {
+export type TSchemaField = {
   id: string;
   type: string;
   name: string;
@@ -106,5 +106,5 @@ export type TSchemaBrick = {
   groupCode: string;
   list: string;
   validationDescHtml: string|null,
-  validations: TValidationSchemaBrick[];
+  validations: TValidationSchemaField[];
 }
