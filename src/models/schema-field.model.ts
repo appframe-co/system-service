@@ -15,6 +15,11 @@ const ValidationSchema: Schema = new Schema({
   presetChoices: [PresetChoiceSchema]
 });
 
+const UnitSchema: Schema = new Schema({
+  code: String,
+  name: String
+}, { _id : false });
+
 const SchemaFieldSchema: Schema = new Schema({
   name: String,
   type: String,
@@ -22,7 +27,8 @@ const SchemaFieldSchema: Schema = new Schema({
   groupCode: String,
   list: Boolean,
   validationDescHtml: String,
-  validations: [ValidationSchema]
+  validations: [ValidationSchema],
+  units: [UnitSchema]
 });
 
 SchemaFieldSchema.set('toObject', { virtuals: true });

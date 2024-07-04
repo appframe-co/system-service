@@ -97,6 +97,11 @@ type TValidationSchemaField = {
   presetChoices: {name: string, value: string}[];
 }
 
+type TUnitField = {
+  code: string;
+  name: string;
+}
+
 export type TSchemaField = {
   id: string;
   type: string;
@@ -105,6 +110,7 @@ export type TSchemaField = {
   icon: string;
   groupCode: string;
   list: string;
-  validationDescHtml: string|null,
+  validationDescHtml: string|null;
   validations: TValidationSchemaField[];
+  units: TUnitField[];
 }
