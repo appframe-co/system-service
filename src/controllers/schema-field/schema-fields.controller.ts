@@ -25,6 +25,14 @@ export default async function SchemaFields(): Promise<TErrorResponse | {schemaFi
                 type: v.type,
                 presetChoices: v.presetChoices
             })),
+            params: schemaField.params.map(v => ({
+                code: v.code,
+                name: v.name,
+                value: v.value,
+                desc: v.desc,
+                type: v.type,
+                presetChoices: v.presetChoices
+            })),
             units: schemaField.units.map(v => ({
                 code: v.code,
                 name: v.name

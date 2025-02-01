@@ -70,7 +70,8 @@ export type TSchemaFieldModel = {
   icon: string;
   list: boolean;
   validationDescHtml: string|null;
-  validations: TValidationFieldModel[]
+  validations: TValidationFieldModel[];
+  params: TValidationFieldModel[];
 }
 
 export type TSchemaFieldOutput = {
@@ -112,5 +113,6 @@ export type TSchemaField = {
   list: string;
   validationDescHtml: string|null;
   validations: TValidationSchemaField[];
+  params: TValidationSchemaField[];
   units: TUnitField[];
 }

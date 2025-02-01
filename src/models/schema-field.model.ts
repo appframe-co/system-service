@@ -27,6 +27,7 @@ const SchemaFieldSchema: Schema = new Schema({
   groupCode: String,
   list: Boolean,
   validationDescHtml: String,
+  params: [ValidationSchema],
   validations: [ValidationSchema],
   units: [UnitSchema]
 });
